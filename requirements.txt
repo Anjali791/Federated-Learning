@@ -1,0 +1,9 @@
+flask
+numpy
+tensorflow
+click
+colorama
+Jinja2
+MarkupSafe
+Werkzeug
+gunicorn

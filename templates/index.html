@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <style>
+      body{
+        background-color: #404040;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      div.form{
+        box-shadow: 2px 2px 30px #1a1a1a;
+        width: 45vw;
+        background-color: #bfbfbf;
+        text-align: center;
+        border-left-color: #a6a6a6;
+      }
+      table{
+        font-size: 10px;
+        box-shadow: 2px 2px 30px #1a1a1a;
+        padding: 15px;
+        background-color: #bfbfbf;
+        width: 420px;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-color: #ffff00;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+      }
+      form{
+        border-left-style: solid;
+        border-color: #ffff00;
+        border-left-width: 5px;
+        padding: 15px;
+      }
+      h1{
+        color: #f2f2f2;
+        text-align: center;
+      }
+      input[type=text]{
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]{
+        background-color: #ffff00;
+        width: 90px;
+        height: 30px;
+        border: 0px;
+      }
+      input[type=submit]:hover{
+        box-shadow: 2px 4px 20px #666666;
+      }
+      span{
+        color: #ffffff;
+      }
+      td{
+        color: #595959;
+      }
+      td.heading{
+        width: 50px;
+      }
+    </style>
+    <title>Binary Class CLassification using Federated Learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Binary Class Classifier using CNN based Federated Learning</h1>
+    <center>
+    <div class="form">
+    <form action="/predict" method="post">
+      Enter values to predict whether the module is defective or not<br><br>
+      <input type="number" name="WMC" placeholder="WMC" autofocus required><br><br>
+      <input type="number" name="DIT" placeholder="DIT" required><br><br>
+      <input type="number" name="NOC" placeholder="NOC" required><br><br>
+      <input type="number" name="CBO" placeholder="CBO" required><br><br>
+      <input type="number" name="RFC" placeholder="RFC" required><br><br>
+      <input type="number" name="LCOM" placeholder="LCOM" required><br><br>
+      <input type="number" name="CA" placeholder="CA" required><br><br>
+      <input type="number" name="CE" placeholder="CE" required><br><br>
+      <input type="number" name="NPM" placeholder="NPM" required><br><br>
+      <input type="number" name="LCOM3" placeholder="LCOM3" required><br><br>
+      <input type="number" name="LOC" placeholder="LOC" required><br><br>
+      <input type="number" name="DAM" placeholder="DAM" required><br><br>
+      <input type="number" name="MOA" placeholder="MOA" required><br><br>
+      <input type="number" name="MFA" placeholder="MFA" required><br><br>
+      <input type="number" name="CAM" placeholder="CAM" required><br><br>
+      <input type="number" name="IC" placeholder="IC" required><br><br>
+      <input type="number" name="CBM" placeholder="CBM" required><br><br>
+      <input type="number" name="AMC" placeholder="AMC" required><br><br>
+      <input type="number" name="NR" placeholder="NR" required><br><br>
+      <input type="number" name="NDC" placeholder="NDC" required><br><br>
+      <input type="number" name="NML" placeholder="NML" required><br><br>
+      <input type="number" name="NDPV" placeholder="NDPV" required><br><br>
+      <input type="number" name="MAX(CC)" placeholder="MAX(CC)" required><br><br>
+      <input type="number" name="AVG(CC)" placeholder="AVG(CC)" required><br><br>
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+</center>
+<br>
+<br>
+<div class = "legend">
+  <table>
+<tr><td class = "heading">WMC :</td><td>Weighted Methods per Class</td></tr><br>
+<tr><td class = "heading">DIT :</td><td>Depth of Inheritance Tree</td></tr><br>
+<tr><td class = "heading">NOC :</td><td>Number of Children</td></tr><br>
+<tr><td class = "heading">CBO :</td><td>Coupling Between Objects</td></tr><br>
+<tr><td class = "heading">RFC :</td><td>Response For a Class</td></tr><br>
+<tr><td class = "heading">LCOM :</td><td>Lack of Cohesion in Methods</td></tr><br>
+<tr><td class = "heading">CA :</td><td>Afferent Coupling</td></tr><br>
+<tr><td class = "heading">CE :</td><td>Efferent Coupling</td></tr><br>
+<tr><td class = "heading">NPM :</td><td>Number of Public Methods</td></tr><br>
+<tr><td class = "heading">LCOM3 :</td><td>Lack of Cohesion in Methods Version 3</td></tr><br>
+<tr><td class = "heading">LOC :</td><td>Lines of Code</td></tr><br>
+<tr><td class = "heading">DAM :</td><td>Data Access Metric</td></tr><br>
+<tr><td class = "heading">MOA :</td><td>Measure of Aggregation</td></tr><br>
+<tr><td class = "heading">MFA :</td><td>Measure of Functional Abstraction</td></tr><br>
+<tr><td class = "heading">CAM :</td><td>Cohesion Among Methods</td></tr><br>
+<tr><td class = "heading">IC :</td><td>Inheritance Coupling</td></tr><br>
+<tr><td class = "heading">CBM :</td><td>Coupling Between Methods</td></tr><br>
+<tr><td class = "heading">AMC :</td><td>Average Method Complexity</td></tr><br>
+<tr><td class = "heading">NR :</td><td>Number of Revisions</td></tr><br>
+<tr><td class = "heading">NDC :</td><td>Number of Distinct Committers</td></tr><br>
+<tr><td class = "heading">NML :</td><td>Number of Modified Lines</td></tr><br>
+<tr><td class = "heading">NDPV :</td><td>Number of Defects in Previous Versions</td></tr><br>
+<tr><td class = "heading">MAX(CC) :</td><td>Maximum McCabe's Complexity</td></tr><br>
+<tr><td class = "heading">AVG(CC) :</td><td>Average McCabe's Complexity</td></tr><br>
+</table>
+</div>
+</body>
+</html>
